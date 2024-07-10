@@ -79,6 +79,7 @@ parts:
       - intervaltree
     plugin: python
     override-build: |
+      make -C ../src/third_party/fasm build
       pip3 install ../src/third_party/fasm/
       snapcraftctl build
     override-prime: |
