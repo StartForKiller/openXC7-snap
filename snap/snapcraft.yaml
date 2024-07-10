@@ -41,6 +41,7 @@ parts:
     plugin: nil
     source-type: git
     source-depth: 1
+    source-branch: v1.6.5
     stage-packages:
       - python3
       - libpython3.8
