@@ -10,9 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: snapcore/action-build@v1
-      id: build
-      with:
-        path: snap
+      id: snapcraft
     - uses: actions/upload-artifact@v2
       with:
         name: snap
