@@ -35,6 +35,9 @@ build-packages:
   - gnutls-bin
   - openssl
   - wget
+  - ca-certificates
+  - ca-certificates-java
+  - openjdk-8-jre-headless
 
 parts:
   pyjson:
@@ -79,10 +82,12 @@ parts:
       - wheel
       - textx
       - intervaltree
+    stage-packages:
+      - openjdk-8-jdk
     plugin: python
     override-build: |
       make -C ../src/third_party/fasm build
-      pip3 install ../src/third_party/fasm/ --install-option="--antlr-runtime=shared"
+      pip3 install ../src/third_party/fasm/
       snapcraftctl build
     override-prime: |
       rm -v usr/lib/python3/dist-packages/fasm*egg* || true
