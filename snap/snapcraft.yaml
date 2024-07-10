@@ -82,7 +82,7 @@ parts:
     plugin: python
     override-build: |
       make -C ../src/third_party/fasm build
-      pip3 install ../src/third_party/fasm/ --install-option="--antlr-runtime=shared" --no-use-pep517
+      pip3 install ../src/third_party/fasm/ --install-option="--antlr-runtime=shared"
       snapcraftctl build
     override-prime: |
       rm -v usr/lib/python3/dist-packages/fasm*egg* || true
