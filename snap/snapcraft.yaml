@@ -34,6 +34,7 @@ build-packages:
   - curl
   - gnutls-bin
   - openssl
+  - wget
 
 parts:
   pyjson:
